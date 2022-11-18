@@ -23,10 +23,21 @@ public class Main {
         }
     }
 
-
+    public static void countOfDays() {
+        int deliveryDistance = 95;
+        int day;
+        if (deliveryDistance <= 20) {
+            day = 1;
+            System.out.println("Потребуется 1 день ");
+        } else if (deliveryDistance > 20) {
+            day = (deliveryDistance - 20) / 40 + 1;
+            System.out.println("Потребуется " + day + " дня(ей) ");
+        }
+    }
 
     public static void main(String[] args) {
         countYear();
         findOS();
+        countOfDays();
     }
 }
